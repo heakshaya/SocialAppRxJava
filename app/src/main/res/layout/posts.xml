@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/rl_play"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/recyclerview"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/green"
+        android:text="Start" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="0dp"/>
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/green"
+        android:text="Stop" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="0dp"/>
+        <Button
+            android:id="@+id/clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/green"
+            android:text="Clear" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="30dp"
+        android:visibility="invisible" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_play"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true" />
+  <!--  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      &lt;!&ndash;  <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/milestone_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true" />&ndash;&gt;
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+    <ProgressBar
+        android:id="@+id/scroll_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible" />
+</androidx.constraintlayout.widget.ConstraintLayout>
